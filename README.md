@@ -1,11 +1,18 @@
-This is a Kotlin Multiplatform project targeting Desktop.
+# Мониторинг Системы на Jetpack Compose Desktop
 
-* `/composeApp` is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - `commonMain` is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    `iosMain` would be the right folder for such calls.
+## Описание
 
+Проект реализует десктопное приложение для мониторинга системных ресурсов (ЦП, ОЗУ, диск, процессы) на Kotlin с использованием Jetpack Compose Desktop. Для сбора данных применяется библиотека Oshi.
 
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…
+## Требования
+
+- **JDK 21** (Можно скачать в IDE, либо https://jdk.java.net/21/ или https://www.oracle.com/java/technologies/downloads)
+- **Android Studio**
+- **Интернет** (для загрузки зависимостей Gradle)
+
+## Запуск
+1. Откройте терминал в корневой директории проекта.
+2. Запустите клиент:
+    ```bash
+    ./gradlew :composeApp:run
+    ```
