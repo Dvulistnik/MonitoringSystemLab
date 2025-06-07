@@ -33,7 +33,7 @@ object SystemInfo {
             .map {
                 ProcessInfo(
                     name = it.name,
-                    cpu = String.format("%.1f%%", it.processCpuLoadCumulative * 100),
+                    cpu = String.format("%.1f%%", it.processCpuLoadCumulative),
                     memory = formatBytes(it.residentSetSize)
                 )
             }

@@ -8,10 +8,8 @@ import kotlin.concurrent.withLock
 object Logger {
     private val file = File("monitor_log.txt")
     private val lock = ReentrantLock()
-    var loggingEnabled = false
 
     fun log(data: String) {
-        if (!loggingEnabled) return
 
         lock.withLock {
             try {
